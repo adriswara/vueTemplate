@@ -22,6 +22,10 @@ onMounted(async () => {
   <main style="font-family: sans-serif; text-align: center; margin-top: 50px;">
     <h1>Spring Boot + Vue App</h1>
     <p>{{ message }}</p>
-    <p>{{ message2 }}</p>
+    <ul>
+        <li v-for="item in message2" :key="item.id" style="margin: 10px 0;">
+          <p>{{ item.name }} + {{item.nik}}</p>
+        </li>
+    </ul>
   </main>
 </template>
